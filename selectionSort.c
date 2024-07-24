@@ -9,16 +9,19 @@ int main() {
 }
 
 int selectionSort(int *arr, int arrSize) {
-    int largestVal = 0;
+    int index = 0;
 
-    for (int firstElement = 0; firstElement < arrSize; firstElement++) {
-        for (int secondElement = 0; secondElement < arrSize; secondElement++) {
-            if (arr[firstElement] < arr[secondElement]) {
-                swap(&arr[firstElement], &arr[secondElement]);
+    while (index < arrSize) {
+        int smallestVal = arr[index];
+        int smallestIndex = index;
+        for (int i = index; i < arrSize; i++) {
+            if (arr[i] < smallestVal) { 
+                smallestVal = arr[i]; 
+                smallestIndex = i;
             }
         }
+
+        swap(&arr[index], &arr[smallestIndex]);
+        index++;
     }
-
-    
-
 }
