@@ -3,13 +3,8 @@
 int bubbleSort(int *arr, int arrSize);
 
 int main() {
-    int testArr[] = {5, 22, 10, 15, 26, 9, 8, 11, 100, 26, 250, 12, 64, 44, 18};
-    int testArrSize = 15;
-
     bubbleSort(testArr, testArrSize);
-
     printArray(testArr, testArrSize);
-    
     return 0;
 }
 
