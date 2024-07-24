@@ -9,18 +9,11 @@ int main() {
 }
 
 int bubbleSort(int *arr, int arrSize) {
-    int swapped;
-    for (int firstElement = 0; firstElement < arrSize - 1; firstElement++) {
-        swapped = 0;
-        for (int secondElement = 0; secondElement < arrSize - firstElement - 1; secondElement++) {
-            if (arr[secondElement] > arr[secondElement + 1]) {
-                swap(&arr[secondElement], &arr[secondElement + 1]);
-                swapped = 1;
+    for (int firstElement = 0; firstElement < arrSize; firstElement++) {
+        for (int secondElement = 0; secondElement < arrSize; secondElement++) {
+            if (arr[firstElement] < arr[secondElement]) {
+                swap(&arr[firstElement], &arr[secondElement]);
             }
-        }
-
-        if (swapped == 0) {
-            break;
         }
     }
 }
